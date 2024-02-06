@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js"></script>
+</head>
+<body class="bodyViews">
+    <header>
+        <h1>TechSolutions</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="galeria.html">Galería</a>
+            <a class="colorGray" href="presupuesto.html">Presupuesto</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <section>
+        <h1 class="tituloPresupuesto">Solicita Tu Presupuesto</h1>
+        <form id="presupuestoForm" onsubmit="return validarFormulario()">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="15" pattern="[A-Za-z]+">
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="40" pattern="[A-Za-z]+">
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" maxlength="9" pattern="[0-9]+">
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                    <tr>
+                        <td class="checkBoxProduct"><input type="checkbox" id="producto1" name="producto1" onclick="calcularPresupuesto()"></td>
+                        <td>Producto 1</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td class="checkBoxProduct"><input type="checkbox" id="producto2" name="producto2" onclick="calcularPresupuesto()"></td>
+                        <td>Producto 2</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td class="checkBoxProduct"><input type="checkbox" id="producto3" name="producto3" onclick="calcularPresupuesto()"></td>
+                        <td>Producto 3</td>
+                        <td>$200</td>
+                    </tr>
+                </table>
+
+                <label>Extras:</label>
+                <input type="checkbox" id="extra1" name="extra1" onclick="calcularPresupuesto()">
+                <label for="extra1">Extra 1 (+$50)</label>
+
+                <input type="checkbox" id="extra2" name="extra2" onclick="calcularPresupuesto()">
+                <label for="extra2">Extra 2 (+$75)</label>
+
+                <input type="checkbox" id="extra3" name="extra3" onclick="calcularPresupuesto()">
+                <label for="extra3">Extra 3 (+$100)</label>
+
+                <p class="presupuestoFinal" id="presupuesto-final">Presupuesto Final: $0</p>
+
+                <label for="aceptar-condiciones">
+                    <input type="checkbox" id="aceptar-condiciones" name="aceptar-condiciones">
+                    Acepto las condiciones de privacidad
+                </label>
+            </div>
+            <button type="submit" class="cta-buttonViews">Enviar Presupuesto</button>
+            <button type="reset" class="cta-buttonViews" onclick="limpiarPresupuesto()">Resetear Formulario</button>
+        </form>
+
+    </section>
+</body>
+<footer>
+    <div class="logo-container">
+        <img src="../images/logo.png" alt="Logo de TechSolutions" class="logo">
+        <img src="../images/facebook.png" alt="imagen 5" class="logo">
+        <img src="../images/imagen6.png" alt="imagen 6" class="logo">
+    </div>
+    <div class="footer-content">
+        <p><span class="colorWhite">&copy; <a class="avisolegal" href="avisoLegal.html">Aviso Legal</a> | Dirección: Sant Martí, 08005 Barcelona | Teléfono: +34 633 951 019</span></p>
+    </div>
+</footer>
+</html>
+
+
